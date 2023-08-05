@@ -56,20 +56,20 @@ function App() {
   		]
 
   const [item, setItem] = useState<any>([]);
-  const [swap, setSwap] = useState(0); //For #0
+  const [swap, setSwap] = useState(0);
 
   const pickItem = async() => {
     try {
     setItem(data[5])
 
       if (item.c&&(item.c=="all of the above.")) {
-        setSwap(Math.floor(Math.random()*2)); //For #c w'all of the above'
+        setSwap(Math.floor(Math.random()*2));
       } else if (item.d&&(item.d!=="all of the above.")) {
-        setSwap(Math.floor(Math.random()*(7-4+1)+4)); //For #d w/o'all of the above.'
+        setSwap(Math.floor(Math.random()*(7-4+1)+4));
       } else if (item.e&&(item.e!=="all of the above.")) {
-        setSwap(Math.floor(Math.random()*7));; //For #d w'all of the above.'
+        setSwap(Math.floor(Math.random()*7));
       } else {
-        setSwap(Math.floor(Math.random()*4)); //For #all(2|3|4)
+        setSwap(Math.floor(Math.random()*4));
       }
 
     } catch (err) {
