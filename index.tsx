@@ -58,7 +58,7 @@ function App() {
   const [item, setItem] = useState<any>([]);
   const [swap, setSwap] = useState(0);
 
-  const pickItem = async() => {
+  const swapOption = async() => {
     try {
     setItem(data[5])
 
@@ -78,7 +78,7 @@ function App() {
   };
 
   useEffect(() => {
-    pickItem();
+    swapOption();
   }, []);
 
   const initialValues = {
@@ -96,7 +96,7 @@ function App() {
 
   return (
     <>
-        <button onClick={pickItem}>Randomize</button>
+        <button onClick={swapOption}>Randomize</button>
 
         <div onChange={handleInputChange}>
 	 <ul>
